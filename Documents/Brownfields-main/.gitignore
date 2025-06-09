@@ -1,0 +1,18 @@
+# Ignore system files and folders
+.DS_Store
+*.swp
+*~
+*.log
+
+# Ignore OS and editor-related directories
+.cache/
+.config/
+.local/
+.snap/
+.npm/
+.nvm/
+.pki/
+.ssh/
+.vscode/
+.idea/
+node_modules/
