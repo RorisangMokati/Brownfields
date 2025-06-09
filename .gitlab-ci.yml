@@ -1,0 +1,50 @@
+stages:
+  - clean
+  - verify
+  - compile
+  - test
+  - package
+
+image: maven:3.8.4-openjdk-17-slim
+
+clean:
+  stage: clean
+  before_script:
+    - mvn install:install-file -Dfile=src/main/resources/eodsql.jar -DgroupId=net.lemnik -DartifactId=eodsql -Dversion=2.2 -Dpackaging=jar
+  script:
+    - mvn clean
+
+verify:
+  stage: verify
+  before_script:
+    - mvn install:install-file -Dfile=src/main/resources/eodsql.jar -DgroupId=net.lemnik -DartifactId=eodsql -Dversion=2.2 -Dpackaging=jar
+  script:
+    - mvn verify
+  artifacts:
+    paths:
+      - target/
+  needs: ["clean"]
+  
+compile:
+  stage: compile
+  before_script:
+    - mvn install:install-file -Dfile=src/main/resources/eodsql.jar -DgroupId=net.lemnik -DartifactId=eodsql -Dversion=2.2 -Dpackaging=jar
+  script: 
+    - mvn compile
+  needs: ["verify"]
+
+test:
+  stage: test
+  before_script:
+    - mvn install:install-file -Dfile=src/main/resources/eodsql.jar -DgroupId=net.lemnik -DartifactId=eodsql -Dversion=2.2 -Dpackaging=jar
+  script:
+    - mvn test
+  needs: ["compile"]
+
+package:
+  stage: package
+  before_script:
+    - mvn install:install-file -Dfile=src/main/resources/eodsql.jar -DgroupId=net.lemnik -DartifactId=eodsql -Dversion=2.2 -Dpackaging=jar
+  script:
+    - mvn package
+  needs: ["test"]

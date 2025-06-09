@@ -1,0 +1,57 @@
+// Put package info at the top of the file and one empty line between that and
+// the import statements. E.g.:
+package ...;
+
+import ...;
+
+
+// In general:
+// Limit line length to 80 characters or less.
+
+// IntelliJ does do quite a bit of formatting suggestions for you. Generally
+// you can follow these, but make sure you follow this style guide first and
+// then IntelliJ.
+
+// Statements end with ; and code blocks are surrounded by { }. These symbols
+// control when and in what order statements get executed, as opposed to
+// indentation such as in Python. However, consistent indentation is still
+// important so that you and/or other developers can read your code easily.
+
+// Indentation:
+// Statements are indented with 4 spaces. Statements that run over multiple
+// lines are indented with 8 spaces.
+
+// Blocks:
+// The opening { is placed at the end of the current line, and the closing } is
+// always on a new line.
+
+// Classes:
+// SalaryCalculator - Classes are named using CamelCase, starting with an
+// uppercase character, no underscores.
+
+// Fields and Variables:
+// displayValue - Names of fields and variables are written using camelCase,
+// starting with a lowercase character, no underscores. Please name these
+// descriptively. For example, if you are getting input from a user for their
+// name, user is a bad variable name because it doesn't tell you anything about
+// what it is. Rather choose something like userName or userNameInput.
+
+// Methods:
+// calculateDifferentialInterest(int years) - Method names are camelCase
+// starting with a lowercase character, no underscores. Method names usually
+// begin with a verb, because they need to describe what the method does.
+
+// Constants:
+// MAXIMUM_THREADS - all uppercase, with underscores separating words.
+
+
+// Format of if/else statements:
+
+if (someCondition) {
+    doSomething;
+} else if {
+    doSomethingElse;
+} else {
+    doThisIfNoneOfAbove;
+}
+

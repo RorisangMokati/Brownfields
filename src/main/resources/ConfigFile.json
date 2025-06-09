@@ -1,0 +1,8 @@
+{
+  "world_width": "200",
+  "world_height": "400",
+  "visibility" : "50",
+  "shield_strength" : "5",
+  "repair_delay" : "10",
+  "reload_delay" : "5"
+}
