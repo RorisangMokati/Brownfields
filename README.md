@@ -7,7 +7,7 @@
 
 ## Getting Started
 * To clone:
-  * git clone git@gitlab.wethinkco.de:qntshangase023/DBN15_Brownfields_2024.git
+  * git clone git rorisangmokati/DBN15_Brownfields_2024.git
 
 ## To Run
 * mvn clean verify test
